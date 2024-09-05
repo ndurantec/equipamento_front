@@ -9,24 +9,28 @@
 <body>
 	<h1>equipamento</h1>
 	<form id="equipamento">
-		<label for="primeiro_numero_inteiro">Nome:</label>
+		<label for="nome_equip">Nome:</label>
 		<input type="text" id="nome_equip"><br>
 		
-		<label for="nome_prof">local:</label>
-		<input type="text" id="nome_prof"><br>
+		<label for="local_equip">local:</label>
+		<input type="text" id="local_equip"><br>
 
-        <label for="nome_prof">marca:</label>
-		<input type="text" id="nome_prof"><br>
+        <label for="marca_equip">marca:</label>
+		<input type="text" id="marca_equip"><br>
 
-        <label for="nome_prof">status:</label>
-		<input type="text" id="nome_prof"><br>
+        <label for="status_equip">status:</label>
+		<input type="text" id="status_equip"><br>
 
-        <label for="nome_prof">numeração:</label>
-		<input type="text" id="nome_prof"><br>
+        <label for="numeracao_equip">numeração:</label>
+		<input type="text" id="numeracao_equip"><br>
 
-
-		<button type="button" id="submit-btn" onclick="salvar()">salvar</button>		
+<div class="btn-class">
+		<button type="button" id="submit-btn-salvar" onclick="salvar()">salvar</button>
+		<button type="button" id="submit-btn-consultar" onclick="consultar()">consultar</button>
+		<button type="button" id="submit-btn-alterar" onclick="alterar()">alterar</button>
+		<button type="button" id="submit-btn-apagar" onclick="apagar()">apagar</button>		
 		<!-- <button type="submit" onclick="executar()">Enviar</button> -->
+	</div>
 	</form>	
 	<script src="../script/equipamento.js"></script>
 </body>
