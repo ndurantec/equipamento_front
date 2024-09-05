@@ -8,17 +8,29 @@
 </head>
 <body>
 	<h1>Manutenção</h1>
-	<form id="cadastro_professor">
-		<label for="primeiro_numero_inteiro">Nome:</label>
-		<input type="text" id="nome"><br>
+	<form id="nome_manutencao">
+		<label for="primeiro_numero_inteiro">Nome do responsável:</label>
+		<input type="text" id="nome_respon"><br>
 		<br>
-		<label for="segundo_numero_inteiro">Número:</label>
-		<input type="text" id="segundo_numero_inteiro"><br>
+		<label for="segundo_numero_inteiro">Email:</label>
+		<input type="text" id="email"><br>
 		<br>
-		<label for="segundo_numero_inteiro">Local:</label>
-		<input type="text" id="segundo_numero_inteiro"><br>
+		<label for="segundo_numero_inteiro">Telefone:</label>
+		<input type="text" id="telefone"><br>
 		<br>
-		<button type="button" id="submit-btn" onclick="salvar()">Salvar</button>
+		<label for="segundo_numero_inteiro">Data:</label>
+		<input type="text" id="data"><br>
+		<br>
+		<label for="segundo_numero_inteiro">Custo do equipamento:</label>
+		<input type="text" id="custo"><br>
+		<br>
+
+		<div class="btn_class">
+			<button type="button" id="submit-btn-salvar" onclick="salvar_1()">Salvar</button>
+			<button type="button" id="submit-btn-consultar" onclick="consultar_1()">Consultar</button>
+			<button type="button" id="submit-btn-alterar" onclick="alterar_1()">Alterar</button>
+			<button type="button" id="submit-btn-apagar" onclick="apagar_1()">Apagar</button>
+		</div>
 	</form>	
 	<script src="../script/manutencao.js"></script>
 </body>

@@ -42,18 +42,22 @@ input[type="text"] {
   border-radius: 3px;
 }
 
-button[type="button"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: none;
+.btn_class{
+  display: flex;
+  justify-content: space-between;
+}
+
+button{
+  width: 120px;
+  border: 1px solid #ccc;
   border-radius: 3px;
-  background-color: #4CAF50;
+  padding: 10px;
+  text-align: center;
+  background: #4CAF50;
   color: #fff;
-  font-weight: bold;
   cursor: pointer;
 }
 
 button[type="button"]:hover {
-  background-color: #3e8e41;
+  background-color: #00f708;
 }
