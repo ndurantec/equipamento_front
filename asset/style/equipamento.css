@@ -42,9 +42,9 @@ body {
     border-radius: 3px;
   }
   
-  button[type="button"] {
+  /*button[type="button"] {
     display: block;
-    width: 100%;
+    width: 20%;
     padding: 10px;
     border: none;
     border-radius: 3px;
@@ -52,8 +52,23 @@ body {
     color: #fff;
     font-weight: bold;
     cursor: pointer;
-  }
+  }*/
   
   button[type="button"]:hover {
     background-color: #3e8e41;
+  }
+
+  .btn-class{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  button{
+    width: 120px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    background: #4CAF50;
+    color: #fff;
   }
