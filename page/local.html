@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local do equipamento</title>
+	<link rel="stylesheet" href="../asset/style/local.css">
+</head>
+<body>
+    <h1>Local do Equipamento</h1>
+	<form id="local">
+		<label for="primeiro_numero_inteiro">Nome do Local:</label>
+		<input type="text" id="nome_local"><br>
+
+		<div class="btn_class">
+			<button type="button" id="submit-btn-salvar" onclick="salvar()">Salvar</button>
+			<button type="button" id="submit-btn-consultar" onclick="consultar()">Consultar</button>
+			<button type="button" id="submit-btn-alterar" onclick="alterar()">Alterar</button>
+			<button type="button" id="submit-btn-apagar" onclick="apagar()">Apagar</button>
+		</div>
+	</form>	
+	<script src="../script/local.js"></script>
+    
+</body>
+</html>
