@@ -1,0 +1,54 @@
+body {
+    background-image: url('../image/fundohome.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size:100%; /* Ajusta a imagem para cobrir todo o fundo */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    padding: 30px 20px;
+    background-color: #2a7496;
+    color: rgb(0, 0, 0);
+    position: relative; /* Para o uso de flexbox e centralização */
+}
+
+.logo {
+    position: absolute; /* Logo fica fixa no lado esquerdo */
+    left: 20px;
+}
+
+.logo img {
+    height: 70px; /* Ajuste conforme necessário */
+}
+
+.nav {
+    flex: 1; /* Faz com que a navegação ocupe o espaço disponível */
+    display: flex;
+    justify-content: center; /* Centraliza os itens da navegação horizontalmente */
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin: 0 15px; /* Espaço entre os links */
+}
+
+.nav ul li a {
+    color: rgb(0, 0, 0); /* Cor padrão dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 20px;
+    transition: color 0.3s ease; /* Suaviza a transição da cor */
+}
+
+.nav ul li a:hover {
+    color: #00b7ffa8; /* Cor dos links quando o mouse está sobre eles */
+    text-decoration: underline; /* Opcional: adiciona sublinhado ao passar o mouse */
+}
