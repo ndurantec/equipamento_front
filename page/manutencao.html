@@ -3,11 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Manutenção</title>
+	<link rel="shortcut icon" href="../asset/image/ferramenta.png" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Kalam:wght@300;400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
 	<link rel="stylesheet" href="../asset/style/manutencao.css">
 </head>
 <body>
-	<h1>Manutenção</h1>
+	<img id="ferramenta" src="../asset/image/ferramenta.png" alt="ferramenta">
+	<h1>Manutenção do Equipamento</h1>
 	<form id="nome_manutencao">
 		<label for="primeiro_numero_inteiro">Nome do responsável:</label>
 		<input type="text" id="nome_respon">
@@ -32,6 +37,7 @@
 			<button type="button" id="submit-btn-apagar" onclick="apagar()">Apagar</button>
 		</div>
 	</form>	
+	<a id="voltar" href="../index.html">Voltar para página príncipal</a>
 	<script src="../script/manutencao.js"></script>
 </body>
 </html>
