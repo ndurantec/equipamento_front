@@ -70,3 +70,9 @@ button[type="button"]:hover {
     display: flex;
     justify-content: center;
   }
+
+  #ferramenta{
+    width: 150px;
+    margin-bottom: -150px;
+  }
+  
