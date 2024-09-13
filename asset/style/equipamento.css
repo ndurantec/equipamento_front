@@ -1,9 +1,10 @@
 /* Estilos gerais */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Patrick Hand";
     background-image: linear-gradient(to right, rgb(34, 199, 250), rgb(171, 252, 252)60%);
     color: #000000;
     margin: 0;
+    font-size: 18px;
   }
   
   /* Estilos do formulário */
@@ -98,6 +99,9 @@ body {
     color: #000000;
   }
 
-  
-
-  
+  #voltar{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+  }  
