@@ -104,5 +104,20 @@ body {
     color: black;
     display: flex;
     justify-content: center;
+<<<<<<< HEAD
     margin-top: 20px;
   }  
+=======
+  }  
+
+#desponivel{
+  display: block;
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: px solid #ccc;
+  border-radius: px;
+  display: block;
+  margin-bottom: 10px;
+}  
+>>>>>>> 9d9b93bfebdf5653d9d869af6d162e4df4b2e63c
