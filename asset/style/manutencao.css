@@ -4,10 +4,19 @@ body {
   background-image: linear-gradient(to right, rgb(34, 199, 250), rgb(171, 252, 252)60%);
   color: #000000;
   margin: 0;
-  font-size: 23px;
+  font-size: 18px;
 }
 
-
+#cabeça{
+  background-color: #2a7496;
+  width: auto;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  position: relative;
+}
 
 /* Estilos do formulário */
 form {
@@ -23,6 +32,12 @@ form {
   form {
     max-width: 90%;
   }
+}
+
+#data{
+  border-radius: 20px;
+  padding: 12px;
+  margin-bottom: 20px;
 }
 
 label {
@@ -66,9 +81,12 @@ button[type="button"]:hover {
   transition: 0.8s;
 }
 
-#ferramenta{
-  width: 150px;
-  margin-bottom: -150px;
+#logo{
+  width: 3%;
+  margin-left: 25px;
+  margin-top: 10px;
+  position: absolute;
+  left: 20px; 
 }
 
 #voltar{
@@ -76,4 +94,5 @@ button[type="button"]:hover {
   color: black;
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
