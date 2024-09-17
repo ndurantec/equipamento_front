@@ -105,3 +105,14 @@ body {
     display: flex;
     justify-content: center;
   }  
+
+#desponivel{
+  display: block;
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: px solid #ccc;
+  border-radius: px;
+  display: block;
+  margin-bottom: 10px;
+}  
