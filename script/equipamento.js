@@ -6,7 +6,8 @@ function salvar() {
   const nome_equip = document.getElementById('nome_equip').value;
   const local = document.getElementById('local_equip').value;
   const marca = document.getElementById('marca_equip').value;
-  const status = document.getElementById('status_equip').value;
+  const status_antigo = document.getElementById('status_equip').value;
+  const status = true;
   const numeracao = Number(document.getElementById('numeracao_equip').value);
  
   console.log(
@@ -31,10 +32,10 @@ function salvar() {
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
     body: JSON.stringify({ 
       nome: nome_equip,
-      local: local_equip,
-      marca: marca_equip,
-      status: status_equip,
-      numeracao: numeracao_equip
+      local: local,
+      marca: marca,
+      status: status,
+      numeracao: numeracao
     }),
 
     headers: headers
