@@ -3,14 +3,18 @@ function salvar() {
   const email = document.getElementById('email').value;
   const telefone = document.getElementById('telefone').value;
   const data = document.getElementById('data').value;
-  const custo = document.getElementById('custo').value;   
+  const custo = document.getElementById('custo').value;
+  const equipamento = document.getElementById('equipamento').value;
+  const local = document.getElementById('local_manutencao').value;     
 
   console.log(
     nome_respon,
     email,
     telefone,
     data,
-    custo
+    custo,
+    equipamento,
+    local,
   );
 
   var headers = new Headers();    
@@ -33,6 +37,8 @@ function salvar() {
       telefone: telefone,
       data: data,
       custo: custo,
+      equipamento: equipamento,
+      local: local,
     }),
 
     headers: headers
