@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function salvar() {
   const nome_equip = document.getElementById('nome_equip').value;
-  const local = document.getElementById('local_equip').value;
+  const local = document.getElementById('locais').value;
   const marca = document.getElementById('marca_equip').value;
-  const status_antigo = document.getElementById('status_equip').value;
+  const status_antigo = document.getElementById('disponível').value;
   const status = true;
   const numeracao = Number(document.getElementById('numeracao_equip').value);
  
