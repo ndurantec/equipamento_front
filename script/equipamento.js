@@ -9,13 +9,12 @@ function salvar() {
   const status_antigo = document.getElementById('disponivel').value;
   const numeracao = Number(document.getElementById('numeracao_equip').value);
  
-  console.log(
-    nome_equip,
-    local,
-    marca,
-    status_antigo,
-    numeracao
-  );
+  console.log("nome_equip: " + nome_equip);
+  console.log("local: " + local);
+  console.log("marca: " + marca);
+  console.log("status_antigo: " + status_antigo);
+  console.log("numeracao: " + numeracao);
+
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
@@ -31,11 +30,18 @@ function salvar() {
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
     body: JSON.stringify({ 
       nome: nome_equip,
-      local: local,
+      local: { id: local },
       marca: marca,
       status: status_antigo,
       numeracao: numeracao
     }),
+
+
+
+    // body: JSON.stringify({ 
+    //   data: data_fluxo, 
+    //   valor: valor_fluxo, descricao: descricao_fluxo, conta: { id: conta }, operacao: { id: operacao}}),
+
 
     headers: headers
 
@@ -48,7 +54,7 @@ function salvar() {
       console.log('Foi no servidor e voltou');
 
       //Esta linha carrega a página sucesso
-      window.location.href = 'sucesso.html'    
+     // window.location.href = 'sucesso.html'    
     } else {
       //Esta linha imprime a mensagem no console
       console.log('Aconteceu algo que não foi possivel salvar');
