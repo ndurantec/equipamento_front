@@ -6,7 +6,7 @@ function salvar() {
   const nome_equip = document.getElementById('nome_equip').value;
   const local = document.getElementById('locais').value;
   const marca = document.getElementById('marca_equip').value;
-  const status_antigo = document.getElementById('disponível').value;
+  const status_antigo = document.getElementById('disponivel').value;
   const numeracao = Number(document.getElementById('numeracao_equip').value);
  
   console.log(
