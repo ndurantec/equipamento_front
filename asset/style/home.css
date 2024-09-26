@@ -1,5 +1,5 @@
 body {
-    background-image: url('../image/fundohometec.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-image: url('../image/tecnico.jfif'); /* Substitua pelo caminho da sua imagem */
     background-size:100%; /* Ajusta a imagem para cobrir todo o fundo */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     margin: 0;
@@ -10,9 +10,13 @@ body {
     align-items: center;
     justify-content: center; /* Centraliza o conteúdo horizontalmente */
     padding: 30px 20px;
-    background-color: #2a7496;
-    color: rgb(0, 0, 0);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.699), rgba(255, 255, 255, 0));
     position: relative; /* Para o uso de flexbox e centralização */
+    margin-top: 30vh;
+    margin-left: 50vh;
+    width: 800px;
+    height: 300px;
+    border-radius: 20px 20px 20px 20px;
 }
 
 .logo {
@@ -42,13 +46,13 @@ body {
 }
 
 .nav ul li a {
-    color: rgb(0, 0, 0); /* Cor padrão dos links */
+    color: rgb(255, 255, 255); /* Cor padrão dos links */
     text-decoration: none; /* Remove o sublinhado dos links */
-    font-size: 20px;
+    font-size: 35px;
     transition: color 0.3s ease; /* Suaviza a transição da cor */
 }
 
 .nav ul li a:hover {
-    color: #00b7ffa8; /* Cor dos links quando o mouse está sobre eles */
-    text-decoration: underline; /* Opcional: adiciona sublinhado ao passar o mouse */
+    color: #00e1ffa8; /* Cor dos links quando o mouse está sobre eles */
+    text-decoration: none; /* Opcional: adiciona sublinhado ao passar o mouse */
 }

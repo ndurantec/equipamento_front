@@ -1,20 +1,33 @@
 /* Estilos gerais */
 body {
     font-family: "Patrick Hand";
-    background-image: linear-gradient(to right, rgb(34, 199, 250), rgb(171, 252, 252)60%);
-    color: #000000;
+    background-image: url(../image/tecnico.jfif);  
+    color: #ffffff;
     margin: 0;
-    font-size: 23px;
+    font-size: 25px;
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-size:100%; /* Ajusta a imagem para cobrir todo o fundo */
+}
+
+#cabeça{
+    background-image: linear-gradient(to top, rgba(177, 177, 177, 0), rgb(0, 0, 0));
+    width: auto;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    position: relative;
 }
 
 /* Estilos do formulário */
 form {
     max-width: 600px;
+    height: 300px;
     margin: 0 auto;
-    padding: 20px;
-    border: 3px solid #aee5ff;
+    padding: 13px;
     border-radius: 20px;
-    background-color: #ddeffa;
+    background-color: #00000093;
 }
   
 @media only screen and (max-width: 767px) {
@@ -65,14 +78,17 @@ button[type="button"]:hover {
 }
 
 #voltar{
+    margin-left: 800px;
+    width: 300px;
     text-decoration: none;
-    color: black;
-    display: flex;
-    justify-content: center;
-  }
+    color: rgb(255, 255, 255);
+    font-size: 3vh;
+}
 
-  #ferramenta{
-    width: 150px;
-    margin-bottom: -150px;
-  }
-  
+#logo{
+    width: 3%;
+    margin-left: 25px;
+    margin-top: 10px;
+    position: absolute;
+    left: 20px; 
+}
