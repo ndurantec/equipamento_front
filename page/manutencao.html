@@ -15,9 +15,7 @@
 		<img id="logo" src="../asset/icon/logo.png" alt="logo">
 		<h2>Manutenção do Equipamento</h2>
 	</header>
-
-	<h1>Manutenção</h1>
-
+	
 	<form id="nome_manutencao">
 		<label for="segundo_numero_inteiro">Data:</label>
 		<input type="date" id="data">
@@ -42,14 +40,17 @@
 		<input type="text" id="custo">
 		<br>
 
-		<div class="btn_class">
-			<button type="button" id="submit-btn-salvar" onclick="salvar()">Salvar</button>
-			<button type="button" id="submit-btn-consultar" onclick="consultar()">Consultar</button>
-			<button type="button" id="submit-btn-alterar" onclick="alterar()">Alterar</button>
-			<button type="button" id="submit-btn-apagar" onclick="apagar()">Apagar</button>
+		
+			<div class="btn_class">
+				<button type="button" id="submit-btn-salvar" onclick="salvar()">Salvar</button>
+				<button type="button" id="submit-btn-consultar" onclick="consultar()">Consultar</button>
+				<button type="button" id="submit-btn-alterar" onclick="alterar()">Alterar</button>
+				<button type="button" id="submit-btn-apagar" onclick="apagar()">Apagar</button>
+			</div>
+				</form>	
+				<a id="voltar" href="../page/home.html">Voltar para página príncipal</a>
+		<div id="roda">
 		</div>
-	</form>	
-	<a id="voltar" href="../page/home.html">Voltar para página príncipal</a>
 	<script src="../script/manutencao.js"></script>
 </body>
 </html>

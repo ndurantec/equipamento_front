@@ -1,38 +1,52 @@
 /* Estilos gerais */
 body {
-    font-family: "Patrick Hand";
-    background-image: linear-gradient(to right, rgb(34, 199, 250), rgb(171, 252, 252)60%);
-    color: #000000;
-    margin: 0;
-    font-size: 18px;
-  }
+  font-family: "Patrick Hand";
+  color: #ffffff;
+  margin: 0;
+  font-size: 25px;
+  background-image: url(../image/tecnico.jfif);
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  background-size:100%; /* Ajusta a imagem para cobrir todo o fundo */
+}
   
-  /* Estilos do formulário */
+.cabecalho{
+  background-image: linear-gradient(to top, rgba(177, 177, 177, 0), rgb(0, 0, 0));
+  width: auto;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  position: relative;
+}
+
+
+/* Estilos do formulário */
+form {
+  max-width: 600px;
+  height: 650px;
+  margin: 0 auto;
+  padding: 13px;
+  border-radius: 20px;
+  background-color: #00000093;
+}
+  
+@media only screen and (max-width: 767px) {
   form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 3px solid #aee5ff;
-    border-radius: 20px;
-    background-color: #ddeffa;
+     max-width: 90%;
   }
+}
   
-  @media only screen and (max-width: 767px) {
-    form {
-      max-width: 90%;
-    }
-  }
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
   
-  label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-top: 50px;
-  }
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
   
   input[type="text"] {
     display: block;
@@ -60,73 +74,58 @@ body {
     transition: 0.8s;
   }
 
-  .btn-class{
-    display: flex;
-    justify-content: space-between;
-  }
+.btn-class{
+  display: flex;
+  justify-content: space-between;
+}
 
-  button{
-    width: 120px;
-    border: 1px solid #000000;
-    border-radius: 8px;
-    padding: 10px;
-    text-align: center;
-    background: #626464;
-    color: #fff;
-    cursor: pointer;
-  }
+button{
+  width: 120px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  background: #626464;
+  color: #fff;
+  cursor: pointer;
+}
 
-  .logo{
-    width: 3%;
-    margin-left: 25px;
-    margin-top: 10px;
-    position: absolute;
-    left: 20px; 
-  }
+.logo{
+  width: 3%;
+  margin-left: 25px;
+  margin-top: 10px;
+  position: absolute;
+  left: 20px; 
+}
 
-  .cabecalho{
-    background-color: #2a7496;
-    width: auto;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 20px;
-    position: relative;
-  }
+#voltar{
+  text-decoration: none;
+  color: rgb(2, 2, 2);
+  display: flex;
+  justify-content: center;
+  margin-top: 6px;
+  padding: 50px;
+  font-size: 3vh;
+}  
 
-  #tlt{
-    color: #000000;
-  }
+#disponivel{
+  display: block;
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  display: block;
+  margin-bottom: 10px;
+}
 
-  #voltar{
-    text-decoration: none;
-    color: black;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }  
-
-  #disponivel{
-    display: block;
-    width: 30%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 2px solid #000000;
-    border-radius: 20px;
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  #locais{
-    display: block;
-    width: 30%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 2px solid #000000;
-    border-radius: 20px;
-    display: block;
-    margin-bottom: 10px;
-  }
-
-
+#locais{
+  display: block;
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  display: block;
+  margin-bottom: 10px;
+}
