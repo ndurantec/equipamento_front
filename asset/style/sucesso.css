@@ -1,7 +1,11 @@
 /* Estilos da página de sucesso */
+body{
+  background-color: rgb(69, 195, 233);
+}
+
 .success-container {
     max-width: 600px;
-    margin: 100px auto; /* Centraliza a mensagem verticalmente e horizontalmente */
+    margin: 300px auto; /* Centraliza a mensagem verticalmente e horizontalmente */
     padding: 20px;
     border: 3px solid #8cf363;
     border-radius: 20px;

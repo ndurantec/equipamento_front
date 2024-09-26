@@ -4,23 +4,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function salvar() {
   const nome_equip = document.getElementById('nome_equip').value;
-  const local = document.getElementById('local_equip').value;
+  const local = document.getElementById('locais').value;
   const marca = document.getElementById('marca_equip').value;
-  const status_antigo = document.getElementById('status_equip').value;
-  const status = true;
+  const status_antigo = document.getElementById('disponível').value;
   const numeracao = Number(document.getElementById('numeracao_equip').value);
  
   console.log(
     nome_equip,
     local,
     marca,
-    status,
+    status_antigo,
     numeracao
   );
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*');
 
   fetch('http://127.0.0.1:8080/equipamento/cadastrar',{
 
@@ -34,7 +33,7 @@ function salvar() {
       nome: nome_equip,
       local: local,
       marca: marca,
-      status: status,
+      status: status_antigo,
       numeracao: numeracao
     }),
 
@@ -72,7 +71,7 @@ function consultar() {
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*');
 
   fetch('localhost:8080/equipamento/inserir' ,{
 
