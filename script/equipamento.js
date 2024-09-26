@@ -7,7 +7,7 @@ function salvar() {
   const local = document.getElementById('locais').value;
   const marca = document.getElementById('marca_equip').value;
   const status_antigo = document.getElementById('disponivel').value;
-  const numeracao = Number(document.getElementById('numeracao_equip').value);
+  const numeracao = document.getElementById('numeracao_equip').value;
  
   console.log("nome_equip: " + nome_equip);
   console.log("local: " + local);
@@ -30,7 +30,7 @@ function salvar() {
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
     body: JSON.stringify({ 
       nome: nome_equip,
-      local: { id: local },
+      local: { id: local},
       marca: marca,
       status: status_antigo,
       numeracao: numeracao
@@ -54,7 +54,7 @@ function salvar() {
       console.log('Foi no servidor e voltou');
 
       //Esta linha carrega a página sucesso
-     // window.location.href = 'sucesso.html'    
+      //window.location.href = 'sucesso.html'    
     } else {
       //Esta linha imprime a mensagem no console
       console.log('Aconteceu algo que não foi possivel salvar');
@@ -71,15 +71,14 @@ function salvar() {
 }
 
 function consultar() {
-  const nome_equip = document.getElementById('nome_equip').value;
-  const marca = document.getElementById('marca').value;
- 
+  const numeracao = document.getElementById('numeracao_equip').value;
+  
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
   headers.append('Access-Control-Allow-Origin', '*');
 
-  fetch('localhost:8080/equipamento/inserir' ,{
+  fetch('localhost:8080/equipamento/consultaPorNumeracao' ,{
 
     method: "POST",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -88,8 +87,8 @@ function consultar() {
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
     body: JSON.stringify({ 
-      nome: nome_equip ,
-      marca: marca_equip
+      numeracao: numeracao
+      
     }),
 
     headers: headers
