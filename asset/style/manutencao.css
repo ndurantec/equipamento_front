@@ -36,7 +36,7 @@ form {
   }
 }
 
-#data{
+#data, #equipamento, #locais{
   border-radius: 20px;
   padding: 12px;
   margin-bottom: 20px;
