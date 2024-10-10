@@ -6,6 +6,7 @@ function salvar() {
   const nome_equip = document.getElementById('nome_equip').value;
   const local = document.getElementById('locais').value;
   const marca = document.getElementById('marca_equip').value;
+<<<<<<< HEAD
   const status_antigo = document.getElementById('disponível').value;
   const numeracao = Number(document.getElementById('numeracao_equip').value);
  
@@ -16,6 +17,17 @@ function salvar() {
     status_antigo,
     numeracao
   );
+=======
+  const status_antigo = document.getElementById('disponivel').value;
+  const numeracao = document.getElementById('numeracao_equip').value;
+ 
+  console.log("nome_equip: " + nome_equip);
+  console.log("local: " + local);
+  console.log("marca: " + marca);
+  console.log("status_antigo: " + status_antigo);
+  console.log("numeracao: " + numeracao);
+
+>>>>>>> 6efaba84e0e9be3dd5fad0cf74e521ce6bef2fe2
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
@@ -31,11 +43,18 @@ function salvar() {
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
     body: JSON.stringify({ 
       nome: nome_equip,
-      local: local,
+      local: { id: local},
       marca: marca,
       status: status_antigo,
       numeracao: numeracao
     }),
+
+
+
+    // body: JSON.stringify({ 
+    //   data: data_fluxo, 
+    //   valor: valor_fluxo, descricao: descricao_fluxo, conta: { id: conta }, operacao: { id: operacao}}),
+
 
     headers: headers
 
@@ -48,7 +67,7 @@ function salvar() {
       console.log('Foi no servidor e voltou');
 
       //Esta linha carrega a página sucesso
-      window.location.href = 'sucesso.html'    
+      window.location.href = 'sucesso.html'   
     } else {
       //Esta linha imprime a mensagem no console
       console.log('Aconteceu algo que não foi possivel salvar');
@@ -65,15 +84,14 @@ function salvar() {
 }
 
 function consultar() {
-  const nome_equip = document.getElementById('nome_equip').value;
-  const marca = document.getElementById('marca').value;
- 
+  const numeracao = document.getElementById('numeracao_equip').value;
+  
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
   headers.append('Access-Control-Allow-Origin', '*');
 
-  fetch('localhost:8080/equipamento/inserir' ,{
+  fetch('localhost:8080/equipamento/consultaPorNumeracao' ,{
 
     method: "POST",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -82,8 +100,8 @@ function consultar() {
     // Convertendo o objeto JavaScript para JSON
     // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
     body: JSON.stringify({ 
-      nome: nome_equip ,
-      marca: marca_equip
+      numeracao: numeracao
+      
     }),
 
     headers: headers
@@ -123,7 +141,7 @@ function alterar() {
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*');
 
   fetch('localhost:8080/equipamento/inserir' ,{
 
@@ -178,7 +196,7 @@ function apagar() {
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*');
 
   fetch('localhost:8080/equipamento/inserir' ,{
 
@@ -229,7 +247,7 @@ function carregarComboLocal() {
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
-  headers.append('Access-Control-Allow-Origin', 'http://127.0.0.1:5500');
+  headers.append('Access-Control-Allow-Origin', '*');
 
   fetch('http://127.0.0.1:8080/local/findAll' ,{
 

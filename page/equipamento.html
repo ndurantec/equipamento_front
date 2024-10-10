@@ -13,20 +13,25 @@
 <body>
 	<header class="cabecalho">
 			<img class="logo" src="../asset/image/logo.png" alt="logocolegio">
-			<h2 id="tlt">Cadastrar Equipamento</h2>
 	</header>
-	<h1>Equipamento</h1>
+	<h1>Cadastrar Equipamento</h1>
 	<form id="equipamento">
 
 		<label>status</a>
+<<<<<<< HEAD
 			<select name="disponível" id="disponível">
 				<option value="disponível">disponível</option>
 				<option value="indisponível">indisponível</option>
+=======
+			<select name="disponivel" id="disponivel">
+				<option value="disponivel">disponível</option>
+				<option value="indisponivel">indisponível</option>
+>>>>>>> 6efaba84e0e9be3dd5fad0cf74e521ce6bef2fe2
 			</select>
 
-			<label for="locais">Escolha um local:</label>
+			<label for="local">Escolha um local:</label>
 			<select id="locais">
-				<option value="">Selecione um local</option>
+				<option value="locais">Selecione um local</option>
 			</select>
 			
 		<label for="nome_equip">Nome:</label>
@@ -36,9 +41,9 @@
 		<input type="text" id="marca_equip"><br>
 
         <label for="numeracao_equip">numeração:</label>
-		<input type="text" id="numeracao_equip"><br>
+		<input type="text" id="numeracao_equip"><br> 
 
-<div class="btn-class">
+	<div class="btn-class">
 		<button type="button" id="submit-btn-salvar" onclick="salvar()">salvar</button>
 		<button type="button" id="submit-btn-consultar" onclick="consultar()">consultar</button>
 		<button type="button" id="submit-btn-alterar" onclick="alterar()">alterar</button>

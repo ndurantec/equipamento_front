@@ -1,14 +1,17 @@
 /* Estilos gerais */
 body {
   font-family: "Patrick Hand";
-  background-image: linear-gradient(to right, rgb(34, 199, 250), rgb(171, 252, 252)60%);
-  color: #000000;
+  background-image: url(../image/tecnico.jfif); 
+  background-color: black; 
+  color: #ffffff;
   margin: 0;
-  font-size: 18px;
+  font-size: 25px;
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  background-size:100%; /* Ajusta a imagem para cobrir todo o fundo */
 }
 
 #cabeça{
-  background-color: #2a7496;
+  background-image: linear-gradient(to top, rgba(177, 177, 177, 0), rgb(0, 0, 0));
   width: auto;
   height: 30px;
   display: flex;
@@ -18,14 +21,13 @@ body {
   position: relative;
 }
 
-/* Estilos do formulário */
 form {
   max-width: 600px;
+  height: 900px;
   margin: 0 auto;
-  padding: 20px;
-  border: 3px solid #aee5ff;
+  padding: 13px;
   border-radius: 20px;
-  background-color: #ddeffa;
+  background-color: #00000093;
 }
 
 @media only screen and (max-width: 767px) {
@@ -34,7 +36,7 @@ form {
   }
 }
 
-#data{
+#data, #equipamento, #locais{
   border-radius: 20px;
   padding: 12px;
   margin-bottom: 20px;
@@ -91,8 +93,10 @@ button[type="button"]:hover {
 
 #voltar{
   text-decoration: none;
-  color: black;
+  color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
+  padding: 50px;
+  font-size: 3vh;
 }
