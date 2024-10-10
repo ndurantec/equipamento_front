@@ -25,7 +25,7 @@ function salvar() {
   headers.append("Content-Type", "application/json");
   headers.append('Access-Control-Allow-Origin', '*');
   
-  fetch('http://127.0.0.1:8080/manutencao/cadastrar' ,{
+  fetch('https://127.0.0.1:8080/manutencao/cadastrar' ,{
   
     method: "POST",
     mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
