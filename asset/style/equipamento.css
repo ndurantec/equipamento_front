@@ -98,6 +98,52 @@ button{
   left: 20px; 
 }
 
+<<<<<<< HEAD
+  .cabecalho{
+    background-color: #2a7496;
+    width: auto;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    position: relative;
+  }
+
+  #tlt{
+    color: #000000;
+  }
+
+  #voltar{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }  
+
+  #disponível{
+    display: block;
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  #locais{
+    display: block;
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    display: block;
+    margin-bottom: 10px;
+  }
+=======
 #voltar{
   text-decoration: none;
   color: rgb(2, 2, 2);
@@ -107,6 +153,7 @@ button{
   padding: 50px;
   font-size: 3vh;
 }  
+>>>>>>> 6efaba84e0e9be3dd5fad0cf74e521ce6bef2fe2
 
 #disponivel{
   display: block;

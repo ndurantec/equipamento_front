@@ -6,6 +6,18 @@ function salvar() {
   const nome_equip = document.getElementById('nome_equip').value;
   const local = document.getElementById('locais').value;
   const marca = document.getElementById('marca_equip').value;
+<<<<<<< HEAD
+  const status_antigo = document.getElementById('disponível').value;
+  const numeracao = Number(document.getElementById('numeracao_equip').value);
+ 
+  console.log(
+    nome_equip,
+    local,
+    marca,
+    status_antigo,
+    numeracao
+  );
+=======
   const status_antigo = document.getElementById('disponivel').value;
   const numeracao = document.getElementById('numeracao_equip').value;
  
@@ -15,6 +27,7 @@ function salvar() {
   console.log("status_antigo: " + status_antigo);
   console.log("numeracao: " + numeracao);
 
+>>>>>>> 6efaba84e0e9be3dd5fad0cf74e521ce6bef2fe2
 
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");

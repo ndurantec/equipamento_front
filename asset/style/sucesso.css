@@ -3,10 +3,13 @@ body{
   background-color: rgb(69, 195, 233);
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 6efaba84e0e9be3dd5fad0cf74e521ce6bef2fe2
 .success-container {
     max-width: 600px;
-    margin: 100px auto; /* Centraliza a mensagem verticalmente e horizontalmente */
+    margin: 300px auto; /* Centraliza a mensagem verticalmente e horizontalmente */
     padding: 20px;
     border: 3px solid #8cf363;
     border-radius: 20px;
