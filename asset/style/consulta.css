@@ -1,18 +1,26 @@
 body {
     background-image: url(../image/tecnico.jfif); 
     background-color: black; 
-    color: #ffffff;
-    margin: 20px;
+    color: #000000;
+    margin: 0;
     font-size: 25px;
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     background-size:100%; /* Ajusta a imagem para cobrir todo o fundo */
 }
 
+p{
+    margin-top: 300px;
+    margin-left: -450px;
+}
+
+h1{
+    margin-left: 20px;
+    color: white;
+}
+
 .psq{
-    /* display: flex; */
-    /* align-items: end; */
-    /* justify-content: space-between; */
-} 
+    margin: 20px;
+}
 
 #pesquisar{
     border: 2px solid rgb(255, 0, 0);
@@ -27,4 +35,19 @@ body {
     position: absolute;
     left: 30px;
     margin-top: 10px;
+}
+
+img{
+    border-radius: 50px;
+}
+
+.procura{
+    justify-content: space-between;
+    align-items: flex-start;
+    display: flex;
+    margin: auto;
+    width: 1600px;
+    height: 600px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
 }
