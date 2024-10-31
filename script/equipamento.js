@@ -2,12 +2,40 @@ document.addEventListener("DOMContentLoaded", function() {
   carregarComboLocal();
 });
 
+ 
+
 function salvar() {
   const nome_equip = document.getElementById('nome_equip').value;
   const local = document.getElementById('locais').value;
   const marca = document.getElementById('marca_equip').value;
   const status_antigo = document.getElementById('disponivel').value;
   const numeracao = Number(document.getElementById('numeracao_equip').value);
+
+  if (nome_equip.trim() === '') {
+    alert('O campo Nome do Equipamento não pode estar vazio.');
+    document.getElementById('nome_equip').value = 'errou';
+    document.getElementById('nome_equip').focus();
+    return false;
+  }
+
+
+
+  const regex = /^[A-Z ]+$/;
+  if (!regex.test(nome_equip)) {
+    alert('O nome do equipamento deve conter apenas letras e espaços.');
+    return false;
+  }
+
+
+
+
+
+
+
+
+
+
+
 
   console.log(nome_equip, local, marca, status_antigo, numeracao);
 
