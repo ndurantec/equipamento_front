@@ -1,8 +1,8 @@
 function salvar() {
-    const nome_local = document.getElementById('nome_local').value;
+    const local = document.getElementById('nome_local').value;
   
     console.log(
-      nome_local
+      local
     );
   
     var headers = new Headers();    
@@ -20,7 +20,7 @@ function salvar() {
       // Convertendo o objeto JavaScript para JSON
       // Esta parte é importante onde você deve passar os parametros (dados) da sua tela
       body: JSON.stringify({ 
-        nome: nome_local
+        nome: local
       }),
   
       headers: headers
