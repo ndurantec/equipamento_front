@@ -5,20 +5,12 @@ function salvar() {
       local
     );
   
-    if (nome_local.trim() === '') {
+    if (local.trim() === '') {
       alert('O campo Nome do Local não pode estar vazio.');
-      document.getElementById('nome_local').value = 'BURROOOO DE MAISSS KKKKKKKKKKKKKKK';
+      document.getElementById('nome_local').value = '';
       document.getElementById('nome_local').focus();
       return false;
     }
-  
-  
-  
-    // const regex = /^[A-Z ]+$/;
-    // if (!regex.test(nome_equip)) {
-    //   alert('O nome do equipamento deve conter apenas letras e espaços.');
-    //   return false;
-    // }
   
   
 
@@ -34,7 +26,7 @@ function salvar() {
     headers.append("Content-Type", "application/json");
     headers.append('Access-Control-Allow-Origin', '*');
     
-    fetch('http://127.0.0.1:8080/local/cadastrar') ,{
+    fetch('http://127.0.0.1:5500/local/cadastrar') ,{
     
       method: "POST",
       mode: "cors", // Usando 'cors' para permitir a requisição de origem cruzada
@@ -52,20 +44,22 @@ function salvar() {
     
       //Aqui inicia função then
     }.then(response => {
-    
+  
       if(response.ok) {
     
         //Esta linha imprime a mensagem no concole
-        console.log('Foi no servidor e voltou');
+        console.log('Foi no servidor e voltou',local);
     
         //Esta linha carrega a página sucesso
         window.location.href = 'sucesso.html'    
       } else {
         //Esta linha imprime a mensagem no console
-        console.log('Aconteceu algo que não foi possivel salvar');
+        console.log('Aconteceu algo que não foi possivel salvar',local);
     
         //Esta linha imprime a mensagem de erro
         throw new Error('Erro ao tentar salvar');
+
+        
       }
     
     })
@@ -117,7 +111,7 @@ function consultar() {
     
         //Esta linha imprime a mensagem de erro
         throw new Error('Erro ao tentar salvar');
-      }
+      };
     
     })
     //Aqui será executado caso a then não seja chamado
