@@ -26,17 +26,6 @@ function salvar() {
     return false;
   }
 
-
-
-
-
-
-
-
-
-
-
-
   console.log(nome_equip, local, marca, status_antigo, numeracao);
 
   var headers = new Headers();    
