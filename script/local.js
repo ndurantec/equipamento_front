@@ -7,18 +7,19 @@ function salvar() {
   
     if (nome_local.trim() === '') {
       alert('O campo Nome do Local não pode estar vazio.');
-      document.getElementById('nome_local').value = 'BURROOOO DE MAISSS KKKKKKKKKKKKKKK';
-      document.getElementById('nome_local').focus();
+      
       return false;
     }
   
   
   
-    // const regex = /^[A-Z ]+$/;
-    // if (!regex.test(nome_equip)) {
-    //   alert('O nome do equipamento deve conter apenas letras e espaços.');
-    //   return false;
-    // }
+    const regex = /^[A-Z ]+$/;
+    if (!regex.test(nome_local)) {
+      alert('O nome do Local deve conter apenas letras e espaços.');
+      document.getElementById('nome_local').value = '';
+      document.getElementById('nome_local').focus();
+      return false;
+    }
   
   
 
