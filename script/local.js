@@ -7,11 +7,40 @@ function salvar() {
   
     if (local.trim() === '') {
       alert('O campo Nome do Local não pode estar vazio.');
+<<<<<<< HEAD
+      
+=======
+      document.getElementById('nome_local').value = '';
+      document.getElementById('nome_local').focus();
+>>>>>>> 528b20498da0f3dc19ca51b195bfadba5649af52
+      return false;
+    }
+  
+  
+<<<<<<< HEAD
+  
+    const regex = /^[A-Z ]+$/;
+    if (!regex.test(nome_local)) {
+      alert('O nome do Local deve conter apenas letras e espaços.');
       document.getElementById('nome_local').value = '';
       document.getElementById('nome_local').focus();
       return false;
     }
   
+<<<<<<< HEAD
+=======
+  
+=======
+>>>>>>> 528b20498da0f3dc19ca51b195bfadba5649af52
+
+
+
+
+
+
+
+
+>>>>>>> fc37eaf74222eca6f22c59f0e8457ec24ec0b8f6
 
     var headers = new Headers();    
     headers.append("Content-Type", "application/json");

@@ -61,7 +61,7 @@ function salvar() {
 function consultar() {
   const data = document.getElementById('data_fluxo').value;
 
-  fetch(`http://127.0.0.1:8080/fluxo/buscarPorData?data=${data}`, {
+  fetch(`http://127.0.0.1:8080/fluxo/buscarPorDa ta?data=${data}`, {
     method: 'GET',
     headers: { 'Content-Type': 'application/json' }
   }).then(response => {
