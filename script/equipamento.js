@@ -8,23 +8,47 @@ function salvar() {
   const nome_equip = document.getElementById('nome_equip').value;
   const local = document.getElementById('locais').value;
   const marca = document.getElementById('marca_equip').value;
-  const status_antigo = document.getElementById('disponivel').value;
+  const status_antigo = document.getElementById('status').value;
   const numeracao = Number(document.getElementById('numeracao_equip').value);
 
-  if (nome_equip.trim() === '') {
-    alert('O campo Nome do Equipamento não pode estar vazio.');
-    document.getElementById('nome_equip').value = 'errou';
-    document.getElementById('nome_equip').focus();
-    return false;
+  console.log(status_antigo);
+
+
+  if(nome_equip == "") {
+  alert("nome não informado");
+  document.getElementById('nome_equip').focus();
+  document.getElementById('nome_equip').value = '';
+  return;
   }
 
-
-
-  const regex = /^[A-Z ]+$/;
-  if (!regex.test(nome_equip)) {
-    alert('O nome do equipamento deve conter apenas letras e espaços.');
-    return false;
+  if( isNaN(numeracao) ) {
+    alert("Número não informado, ou Número não está com o formato adequado");
+    document.getElementById('numeracao_equip').focus();
+    document.getElementById('numeracao_equip').value = '';
+    return;
   }
+
+    if(marca == "") {
+      alert("nome não informado");
+      document.getElementById('marca_equip').focus();
+      document.getElementById('marca_equip').value = '';
+      return;
+      }
+  
+  //if (nome_equip.trim() === '') {
+  //  alert('O campo Nome do Equipamento não pode estar vazio.');
+  //  document.getElementById('nome_equip').value = '';
+  //  document.getElementById('nome_equip').focus();
+  //  return ;
+  //}
+//
+//
+//
+  //const regex = /^[A-Z ]+$/;
+  //if (!regex.test(nome_equip)) {
+  //  alert('O nome do equipamento deve conter apenas letras e espaços.');
+  //  return false;
+  //}
 
   console.log(nome_equip, local, marca, status_antigo, numeracao);
 
@@ -54,14 +78,14 @@ function salvar() {
       const id_operacao = data.id;
       console.log('ID do registro salvo:', id_operacao);
       localStorage.setItem('id_operacao', id_operacao);
-      window.location.href = 'sucesso.html';    
+      //window.location.href = 'sucesso.html';    
   }).catch(error => console.error('Erro!:', error));
 }
 
 function consultar() {
   const data = document.getElementById('data_fluxo').value;
 
-  fetch(`http://127.0.0.1:8080/fluxo/buscarPorDa ta?data=${data}`, {
+  fetch(`http://127.0.0.1:8080/fluxo/buscarPorData?data=${data}`, {
     method: 'GET',
     headers: { 'Content-Type': 'application/json' }
   }).then(response => {
@@ -82,7 +106,7 @@ function consultar() {
 document.addEventListener('DOMContentLoaded', function() {
   const link = document.getElementById('contabt');
   localStorage.clear();
-  link.href = 'home.html';
+  //link.href = 'home.html';
 });
 
 function alterar() {
@@ -144,7 +168,7 @@ function apagar() {
 }
 
 function carregarComboLocal() {
-  fetch('http://127.0.0.1:8080/locais', {
+  fetch('http://127.0.0.1:8080/local/findAll', {
     method: 'GET',
     headers: { 'Content-Type': 'application/json' }
   }).then(response => {
