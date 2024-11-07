@@ -20,6 +20,12 @@ function salvar() {
   console.log(equipamento);
   console.log(nome_respon);
 
+  if(nome_respon.lenght > 50) {
+    alert('O nome deve ter no máximo 50 caracteres');
+    document.getElementById('nome_respon').value = '';
+    document.getElementById('nome_respon').focus;
+    return false;
+  }
    
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
