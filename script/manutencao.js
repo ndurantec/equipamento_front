@@ -23,44 +23,94 @@ function salvar() {
   // console.log("======================" + nome_respon.length);
 
   //Testado e funcionando 08/11/2024
+
+  //data
+  if(data.length === "") {
+    alert('Selecione uma data');
+    document.getElementById('data').value = '';
+    document.getElementById('data').focus;
+    return false;
+  }
+
+  //nome_respon
   if(nome_respon.length > 50) {
     alert('O nome deve ter no máximo 50 caracteres');
     document.getElementById('nome_respon').value = '';
     document.getElementById('nome_respon').focus;
     return false;
   }
+
+  //custo
+  if(custo.length > 50) {
+    alert('O nome deve ter no máximo 50 caracteres');
+    document.getElementById('custo').value = '';
+    document.getElementById('custo').focus;
+    return false;
+  }
+
+  if (isNaN(custo) || custo.trim() === '') {
+    alert('Por favor, insira apenas valor numérico para o custo, sem virgula ou ponto.');
+}
+
+  //email
+  if(email.length > 50) {
+    alert('O nome deve ter no máximo 50 caracteres');
+    document.getElementById('email').value = '';
+    document.getElementById('email').focus;
+    return false;
+  }
+
+  var regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  // Verificar se o email é válido de acordo com a regex
+  if (!regexEmail.test(email)) {
+      alert('Por favor, insira um endereço de email válido.');
+  }
+
+  //telefone
+  if(telefone.length > 50) {
+    alert('O nome deve ter no máximo 50 caracteres');
+    document.getElementById('telefone').value = '';
+    document.getElementById('telefone').focus;
+    return false;
+  }
+
+  if (isNaN(telefone) || telefone.trim() === '') {
+    alert('Por favor, insira apenas valor numérico para o telefone.');
+  }
    
+  
   var headers = new Headers();    
   headers.append("Content-Type", "application/json");
   headers.append('Access-Control-Allow-Origin', '*');
   
-      fetch('http://127.0.0.1:8080/manutencao/cadastrar', {
-        method: "POST",
-        mode: "cors",
-        cache: "no-cache",
-        body: JSON.stringify({ 
-          local: local,
-          telefone: telefone,
-          email: email,
-          data: data,
-          custo: custo,
-          equipamento: equipamento,
-          nome: nome_respon
-        }),
-        headers: headers
-      }).then(response => {
-          if (response.ok) {
-            return response.json();
-          } else {
-            throw new Error('Erro ao tentar salvar');
-          }
-      }).then(data => {
-          const id_operacao = data.id;
-          console.log('ID do registro salvo:', id_operacao);
-          localStorage.setItem('id_operacao', id_operacao);
-          //window.location.href = 'sucesso.html';    
-      }).catch(error => console.error('Erro!:', error));
-    }
+  fetch('http://127.0.0.1:8080/manutencao/cadastrar', {
+    method: "POST",
+    mode: "cors",
+    cache: "no-cache",
+    body: JSON.stringify({ 
+      local: local,
+      telefone: telefone,
+      email: email,
+      data: data,
+      custo: custo,
+      equipamento: equipamento,
+      nome: nome_respon
+    }),
+    headers: headers
+    }).then(response => {
+        if (response.ok) {
+        return response.json();
+        } else {
+          throw new Error('Erro ao tentar salvar');
+        }
+    }).then(data => {
+      const id_operacao = data.id;
+      console.log('ID do registro salvo:', id_operacao);
+      localStorage.setItem('id_operacao', id_operacao);
+      //window.location.href = 'sucesso.html';    
+    }).catch(error => console.error('Erro!:', error));
+}
     
 function consultar() {
   const nome_respon = document.getElementById('nome_respon').value;
