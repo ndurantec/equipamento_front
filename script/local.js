@@ -13,7 +13,7 @@ function salvar() {
   }
   
   // Regex para verificar apenas letras maiúsculas e espaços
-  const regex = /^[A-Z ]+$/;
+  const regex = /^[A-Z0-9 ]+$/;
   if (!regex.test(local)) {
       alert('O nome do Local deve conter apenas letras MAIÚSCULAS e espaços.');
       document.getElementById('nome_local').value = '';
@@ -108,12 +108,15 @@ function consultar() {
   })
   .then(id_local => {
     console.log("ID do local recebida:", id_local); // Aqui o id é diretamente o retorno
-
-    if (id_local) {
+    
+    console.log("O registro --> " + id_local);
+    
+    if (!id_local == "") {
+      console.log("Entrou no if");
       localStorage.setItem('id_local', id_local);
-      alert("item achado com sucesso! agora é possivel alterar ou deletar o local selecionado ");
+      alert("Local achado com sucesso! agora é possivel alterar ou deletar o local selecionado ");
     } else {
-      alert("Local encontrado com sucesso! agora é possivel alterar ou deletar o local selecionado ");
+      alert("Local não encontrado!");
       console.error("ID não encontrado na resposta");
     }
   })
